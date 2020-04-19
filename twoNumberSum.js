@@ -84,3 +84,25 @@ function twoNumberSumD(array, targetSum) {
   }
   return result;
 }
+
+/*
+Optimized Solution - sort the array and have two pointers at both ends of the array, narrowing the search area with each iteration
+Time: O(nlog(n))
+Space: O(1)
+*/
+function twoNumberSumE(array, targetSum) {
+  array.sort((a, b) => a - b);
+  let left = 0;
+  let right = array.length - 1;
+  while (left < right) {
+    const currentSum = array[left] + array[right];
+    if (currentSum === targetSum) {
+      return [array[left], array[right]];
+    } else if (currentSum < targetSum) {
+      left++;
+    } else if (currentSum > targetSum) {
+      right--;
+    }
+  }
+  return [];
+}
