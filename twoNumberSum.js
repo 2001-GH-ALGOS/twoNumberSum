@@ -1,9 +1,8 @@
 /*
-Brute Force Solution A - while loop
-Time: O(N)
+Brute Force Solution A - nested for loop
+Time: O(N^2)
 Space: O(1)
 */
-
 function twoNumberSumA(array, targetSum) {
   let finalArr = [];
   for (let i = 0; i < array.length - 1; i++) {
@@ -21,8 +20,8 @@ function twoNumberSumA(array, targetSum) {
 }
 
 /*
-Brute Force Solution B - nested for loop
-Time: O(N^2)
+Brute Force Solution B - while loop
+Time: O(N)
 Space: O(1)
 */
 function twoNumberSumB(array, targetSum) {
