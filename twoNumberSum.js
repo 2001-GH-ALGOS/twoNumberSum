@@ -54,10 +54,10 @@ Space: O(1)
 function twoNumberSumC(array, targetSum) {
   let result = [];
   for (let i = 0; i < array.length; i++) {
-    let firstNum = array[i];
-    if (array.includes(targetSum - firstNum)) {
-      if (firstNum !== targetSum - firstNum) {
-        result.push(firstNum, targetSum - firstNum);
+    let currentNum = array[i];
+    if (array.includes(targetSum - currentNum)) {
+      if (currentNum !== targetSum - currentNum) {
+        result.push(currentNum, targetSum - currentNum);
         break;
       }
     }
