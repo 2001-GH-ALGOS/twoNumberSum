@@ -4,7 +4,7 @@ Time: O(N^2)
 Space: O(1)
 */
 function twoNumberSumA(array, targetSum) {
-  let finalArr = [];
+  let result = [];
   for (let i = 0; i < array.length - 1; i++) {
     let firstEl = array[i];
 
@@ -12,11 +12,11 @@ function twoNumberSumA(array, targetSum) {
       let secondEl = array[j];
 
       if (firstEl + secondEl === targetSum) {
-        finalArr.push(firstEl, secondEl);
+        result.push(firstEl, secondEl);
       }
     }
   }
-  return finalArr;
+  return result;
 }
 
 /*
@@ -52,17 +52,17 @@ Time: O(N^2)
 Space: O(1)
 */
 function twoNumberSumC(array, targetSum) {
-  let finalArr = [];
+  let result = [];
   for (let i = 0; i < array.length; i++) {
     let firstNum = array[i];
     if (array.includes(targetSum - firstNum)) {
       if (firstNum !== targetSum - firstNum) {
-        finalArr.push(firstNum, targetSum - firstNum);
+        result.push(firstNum, targetSum - firstNum);
         break;
       }
     }
   }
-  return finalArr;
+  return result;
 }
 
 /*
