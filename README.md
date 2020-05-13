@@ -1,4 +1,4 @@
-# twoNumberSum
+# Two-Number-Sum
 
 #### Problem Statement
 
